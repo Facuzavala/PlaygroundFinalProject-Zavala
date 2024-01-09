@@ -1,0 +1,19 @@
+{% extends "TiendaRiver/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Producto Detalle</h1>
+
+
+<p>Nombre del Producto: <i> {{producto.articulo}}</i></p>
+<p>Talle del Producto: <i> {{producto.talle}}</i></p>
+<p>Precio del Producto: <i> {{producto.precio}}</i></p>
+<p>
+    <a href="{% url 'ListaProductos' %}">Regresar</a>
+</p>
+
+
+
+{% endblock contenidoQueCambia  %}

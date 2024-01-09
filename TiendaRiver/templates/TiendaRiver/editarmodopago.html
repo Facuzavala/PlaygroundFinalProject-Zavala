@@ -1,0 +1,20 @@
+{% extends "TiendaRiver/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h3>Formulario - Editar Modos de Pago</h3>
+
+{% if mi_formulario.errors %}
+<p style="color:red">Están mal los datos, revisar</p>
+{% endif %}
+
+<form action = ""   method = "post" enctype="multipart/form-data"> {% csrf_token %}
+    
+        {{mi_formulario.as_p}}
+    
+    <input type = "submit" value="Enviar">
+</form>         
+        
+{% endblock contenidoQueCambia %}

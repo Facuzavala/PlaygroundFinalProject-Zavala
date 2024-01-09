@@ -1,0 +1,17 @@
+{% extends "TiendaRiver/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Borrar Cliente</h1>
+
+
+<form action=""  method= "post"> {% csrf_token %}
+    Estas seguro que deseas borrar el Cliente {{cliente.nombre}} - email {{cliente.email}} ??
+    <input type="submit" value="Eliminar">
+</form>
+
+
+
+{% endblock contenidoQueCambia  %}

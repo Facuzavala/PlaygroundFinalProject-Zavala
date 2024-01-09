@@ -1,0 +1,17 @@
+<p>Se acceden a datos del Cliente: {{apellido}}</p>
+
+{% if resultados %}
+<ul>
+{% for Cliente in resultados %}
+    <li>Nombre: {{Cliente.nombre}}</li>
+    <li>Apellido: {{Cliente.apellido}}</li>
+    <li>email: {{Cliente.email}}</li>
+
+{% endfor %}
+</ul> 
+
+{% else %}
+
+<p>No se encuentra un usuario registrado con ese apellido.</p>
+
+{% endif %}

@@ -1,0 +1,30 @@
+{% extends "TiendaRiver/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h3>Listado de clientes</h3>
+<button>
+<a href="{% url 'NuevoCliente' %}" > Nuevo Cliente</a>
+</button>
+{% for d in clientes %}
+    <li> Nombre: {{d.nombre}}
+        / Apellido: {{d.apellido}}
+        / Email: {{d.email}}
+        <p>
+            <button>
+            <a href="{% url 'DetalleCliente' d.pk %}" > Ver</a>
+        </button>
+            <button>
+            <a href="{% url 'EditarCliente' d.pk %}" > Editar</a>
+        </button>
+            <button>
+            <a href="{% url 'BorrarCliente' d.pk %}" > Borrar</a>
+        </button>
+
+        </p>
+    </li>
+
+{% endfor %}
+{% endblock contenidoQueCambia %}

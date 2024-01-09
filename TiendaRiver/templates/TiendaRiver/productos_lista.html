@@ -1,0 +1,40 @@
+{% extends "TiendaRiver/padre.html" %}
+
+{% block titulo %} Productos {% endblock titulo %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h3>Listado de clientes</h3>
+<button>
+<a href="{% url 'NuevoProducto' %}" > Nuevo Producto</a>
+</button>
+{% for d in productos %}
+    <li> Articulo: {{d.articulo}}
+        / Talle: {{d.talle}}
+        / Precio: {{d.precio}}
+        <p>
+            <button>
+            <a href="{% url 'DetalleProducto' d.pk %}" > Ver</a>
+        </button>
+
+
+        </p>
+
+    
+        {% if user.is_superuser %}
+        <p>
+            <button>
+            <a href="{% url 'EditarProducto' d.pk %}" > Editar</a>
+        </button>
+        <button>
+            <a href="{% url 'BorrarProducto' d.pk %}" > Borrar</a>
+        </button>
+        
+        </p>
+        {% endif %}
+    </li>
+
+{% endfor %}
+{% endblock contenidoQueCambia %}

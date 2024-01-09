@@ -1,0 +1,20 @@
+{% extends "TiendaRiver/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Crear Producto</h1>
+
+
+<form action=""  method="post"> {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Crear">
+    <p>
+        <a href="{% url 'ListaProductos' %}">Regresar</a>
+    </p>
+</form>
+
+
+
+{% endblock contenidoQueCambia  %}

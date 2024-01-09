@@ -1,0 +1,22 @@
+{% extends "TiendaRiver/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h3>Cambiar contraseña</h3>
+<h3>De {{usuario}}</h3>
+
+<form action = ""   method = "post"> {% csrf_token %}
+    
+    <table>
+        {{form}}
+        
+    </table>
+    <button>Cambiar</button>
+
+</form>         
+
+
+
+{% endblock contenidoQueCambia %}   

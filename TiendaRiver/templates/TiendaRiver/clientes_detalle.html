@@ -1,0 +1,19 @@
+{% extends "TiendaRiver/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Clientes Detalle</h1>
+
+
+<p>Nombre del Cliente: <i> {{cliente.nombre}}</i></p>
+<p>Apellido del Cliente: <i> {{cliente.apellido}}</i></p>
+<p>Email del Cliente: <i> {{cliente.email}}</i></p>
+<p>
+    <a href="{% url 'ListaClientes' %}">Regresar</a>
+</p>
+
+
+
+{% endblock contenidoQueCambia  %}

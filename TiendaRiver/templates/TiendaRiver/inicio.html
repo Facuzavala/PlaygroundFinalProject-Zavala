@@ -1,0 +1,23 @@
+{% extends "TiendaRiver/padre.html" %}
+
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+{% if mensaje %}
+    <p>
+        {{mensaje}}
+    </p>
+
+
+    {% endif %}
+
+<h1 style="color: #ff0000;font-family: Helvetica, sans-serif;">CLUB ATLETICO RIVER PLATE</h1>
+<h4 style="color: #000000;font-family: Helvetica, sans-serif;" >Aqui podra adquirir los ultimos articulos del club de sus amores.</h4>
+<h1 style="color: #ff0000;font-family: Helvetica, sans-serif;">¡Vivir y jugar con GRANDEZA! --CARP--</h1>
+
+<button>
+    <a href="{% url 'acercademi'%}" > Acerca de mi</a>
+</button>
+{% endblock contenidoQueCambia %}
